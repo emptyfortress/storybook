@@ -8,8 +8,7 @@
 import './button.css'
 
 export default {
-	name: 'my-button',
-
+	name: 'myButton',
 	props: {
 		label: {
 			type: String,

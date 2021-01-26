@@ -1,29 +1,18 @@
 <template lang="pug">
-ul
-	li foo
-	li bar
-	li baz
+<h2>Hello</h2>
 </template>
 
 <script>
 
 export default {
-	data () {
+	data() {
 		return {
-			name: 'myBt',
-			msg: 'hellooo'
 		}
-	}
+	},
 }
 
 </script>
 
 <style scoped lang="scss">
-ul {
-	color: red;
-	li {
-		color: blue;
-	}
-}
 
 </style>

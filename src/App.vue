@@ -1,15 +1,18 @@
 <template lang="pug">
-	#app
-		HelloWorld(msg="Welcome to Your Vue.js App")
+#app
+	HelloWorld(msg="Welcome to Your Vue.js App")
+	myBt
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import myBt from '@/components/myBt'
 
 export default {
 	name: 'App',
 	components: {
 		HelloWorld,
+		myBt,
 	},
 }
 </script>
