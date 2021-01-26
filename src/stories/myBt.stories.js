@@ -1,7 +1,7 @@
 import myBt from '../components/myBt.vue'
 
 export default {
-	title: 'myBtlaksj',
+	title: 'Test/myBt',
 	component: myBt,
 }
 
