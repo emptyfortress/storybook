@@ -1,7 +1,7 @@
 import Logo from './Logo.vue'
 
 export default {
-	title: 'Docsvision brand',
+	title: 'Brand',
 	component: Logo,
 }
 

@@ -1,7 +1,7 @@
 import Colors from './Colors.vue'
 
 export default {
-	title: 'Docsvision brand',
+	title: 'Brand',
 	component: Colors,
 }
 const Template = (args, { argTypes }) => ({

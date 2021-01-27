@@ -1,4 +1,12 @@
 # storybook
+Попытка использования storybook для разработки компонентов.
+Квартальная цель 1-2021
+
+storybook in storybook-static directory
+
+npm run storybook
+npm run build-storybook
+
 
 ## Project setup
 ```

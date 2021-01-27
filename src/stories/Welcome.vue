@@ -1,11 +1,12 @@
 <template lang="pug">
 .all
-	h2 Welcome to Docsvision storybook
+	img(src="./assets/kit.svg" width="350")
+	h2 Welcome to Docsvision kit
 	p Это попытка разработки UI элементов в изолированной среде.<br>К сожалению, пока (?), все компоненты написаны на vue. Возможно, в дальнейшем появится какой-то конвертор.
 	.flex
-		img(src="./assets/vue.png" width="120")
+		img(src="./assets/vue.png" width="50")
 		span.big &rlarr;
-		img(src="./assets/react-logo.svg" width="130")
+		img(src="./assets/react-logo.svg" width="50")
 </template>
 
 <script>

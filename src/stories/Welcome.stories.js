@@ -1,7 +1,7 @@
 import Welcome from './Welcome.vue'
 
 export default {
-	title: 'Docsvision brand',
+	title: 'Docsvision kit',
 	component: Welcome,
 }
 
