@@ -1,7 +1,7 @@
 import MyButton from './Button.vue'
 
 export default {
-	title: 'Test/Button',
+	title: 'Components/Button',
 	component: MyButton,
 	argTypes: {
 		backgroundColor: { control: 'color' },
