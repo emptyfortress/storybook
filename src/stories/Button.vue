@@ -1,14 +1,15 @@
-<template>
-	<button type="button" :class="classes" @click="onClick" :style="style">
-		{{ label }}
-	</button>
+<template lang="pug">
+v-btn(color="primary") {{label}}
+
 </template>
 
 <script>
-import './button.css'
+// import '/Users/admin/Develop/storybook/node_modules/vuetify/src/components/VBtn/VBtn.sass'
+
+// import './button.css'
 
 export default {
-	name: 'myButton',
+	name: 'Button',
 	props: {
 		label: {
 			type: String,
@@ -31,19 +32,19 @@ export default {
 	},
 
 	computed: {
-		classes() {
-			return {
-				'storybook-button': true,
-				'storybook-button--primary': this.primary,
-				'storybook-button--secondary': !this.primary,
-				[`storybook-button--${this.size}`]: true,
-			}
-		},
-		style() {
-			return {
-				backgroundColor: this.backgroundColor,
-			}
-		},
+		// classes() {
+		// 	return {
+		// 		'storybook-button': true,
+		// 		'storybook-button--primary': this.primary,
+		// 		'storybook-button--secondary': !this.primary,
+		// 		[`storybook-button--${this.size}`]: true,
+		// 	}
+		// },
+		// style() {
+		// 	return {
+		// 		backgroundColor: this.backgroundColor,
+		// 	}
+		// },
 	},
 
 	methods: {

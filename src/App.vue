@@ -1,29 +1,30 @@
 <template lang="pug">
-#app
-	HelloWorld(msg="Welcome to Your Vue.js App")
-	myBt
+	v-app
+		v-app-bar(app color="primary" dark)
+			.d-flex.align-center
+				v-img(class="shrink mr-2" contain src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40")
+
+				v-img(class="shrink mt-1 hidden-sm-and-down" contain min-width="100" src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100")
+
+			v-spacer
+
+		v-main
+			.pa-5
+				v-btn(color="primary") Button
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import myBt from '@/components/myBt'
+import HelloWorld from './components/HelloWorld'
 
 export default {
 	name: 'App',
+
 	components: {
 		HelloWorld,
-		myBt,
 	},
+
+	data: () => ({
+		//
+	}),
 }
 </script>
-
-<style lang="scss">
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px;
-}
-</style>

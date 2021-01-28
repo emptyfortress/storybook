@@ -1,7 +1,15 @@
 body {
 	background: #efeeee;
-	font-family: 'Roboto', sans-serif;
+	// font-family: 'Roboto', sans-serif;
 	h2 {
 		font-weight: 400;
 	}
+}
+.theme--light.v-application {
+	background: #efeeee !important;
+}
+
+.sb-show-main.sb-main-padded {
+	padding: 0;
+	margin: 0;
 }
