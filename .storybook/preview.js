@@ -3,7 +3,7 @@ import './global.scss'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n'
-// import i18n from '@/i18n'
+import i18n from '@/i18n'
 // import i18n from 'i18n'
 import { options } from '@/plugins/vuetify' // <== important
 
@@ -26,7 +26,7 @@ export const decorators = [
 		// extend Vue to use Vuetify around the wrapped component
 		return Vue.extend({
 			vuetify,
-			VueI18n,
+			i18n,
 			components: { wrapped },
 			props: {
 				dark: {

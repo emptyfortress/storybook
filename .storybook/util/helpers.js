@@ -7,7 +7,7 @@ export const storyFactory = (options) => {
 		// component-level default args to the component being tested
 		// you could add other app-level options here, too!
 		args: {
-			dark: true,
+			dark: false,
 			...args,
 		},
 		argTypes: {
@@ -18,6 +18,7 @@ export const storyFactory = (options) => {
 					options: { English: 'en', 'Русский': 'ru' },
 				},
 			},
+			// ...argsTypes,
 		},
 		parameters: {
 			docs: {

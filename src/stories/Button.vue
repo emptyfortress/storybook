@@ -1,13 +1,18 @@
 <template lang="pug">
-v-btn(color="primary") {{ label }}
+div
+	v-btn(:class="calcClass") {{ label }}
 
 </template>
-
 
 <script>
 
 export default {
 	name: 'Button',
+	computed: {
+		calcClass() {
+			return 'v-size--' + this.size
+		}
+	},
 	props: {
 		label: {
 			type: String,
@@ -19,9 +24,9 @@ export default {
 		},
 		size: {
 			type: String,
-			default: 'medium',
+			default: 'small',
 			validator: function(value) {
-				return ['small', 'medium', 'large'].indexOf(value) !== -1
+				return ['x-small', 'small', 'medium', 'large'].indexOf(value) !== -1
 			},
 		},
 		backgroundColor: {
