@@ -1,12 +1,10 @@
 <template lang="pug">
-v-btn(color="primary") {{label}}
+v-btn(color="primary") {{ label }}
 
 </template>
 
-<script>
-// import '/Users/admin/Develop/storybook/node_modules/vuetify/src/components/VBtn/VBtn.sass'
 
-// import './button.css'
+<script>
 
 export default {
 	name: 'Button',
@@ -30,23 +28,6 @@ export default {
 			type: String,
 		},
 	},
-
-	computed: {
-		// classes() {
-		// 	return {
-		// 		'storybook-button': true,
-		// 		'storybook-button--primary': this.primary,
-		// 		'storybook-button--secondary': !this.primary,
-		// 		[`storybook-button--${this.size}`]: true,
-		// 	}
-		// },
-		// style() {
-		// 	return {
-		// 		backgroundColor: this.backgroundColor,
-		// 	}
-		// },
-	},
-
 	methods: {
 		onClick() {
 			this.$emit('onClick')

@@ -2,10 +2,14 @@ import './global.scss'
 // Imports for configuring Vuetify
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import { options } from '../src/plugins/vuetify' // <== important
+import VueI18n from 'vue-i18n'
+// import i18n from '@/i18n'
+// import i18n from 'i18n'
+import { options } from '@/plugins/vuetify' // <== important
 
 // // configure Vue to use Vuetify
 Vue.use(Vuetify)
+Vue.use(VueI18n)
 
 export const parameters = {
 	actions: { argTypesRegex: "^on[A-Z].*" },
@@ -22,11 +26,16 @@ export const decorators = [
 		// extend Vue to use Vuetify around the wrapped component
 		return Vue.extend({
 			vuetify,
+			VueI18n,
 			components: { wrapped },
 			props: {
 				dark: {
 					type: Boolean,
 					default: context.args.dark,
+				},
+				locale: {
+					type: String,
+					default: 'en',
 				},
 			},
 			watch: {
@@ -36,6 +45,12 @@ export const decorators = [
 						this.$vuetify.theme.dark = val
 					}
 				},
+				locale: {
+					immediate: true,
+					handler (val) {
+						this.$i18n.locale = val
+					}
+				}
 			},
 			template: `
 				<v-app>
