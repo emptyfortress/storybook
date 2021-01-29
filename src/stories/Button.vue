@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-	v-btn(:class="calcClass") {{ label }}
+	v-btn(v-bind="siz") {{ label }}
 
 </template>
 
@@ -9,9 +9,18 @@ div
 export default {
 	name: 'Button',
 	computed: {
-		calcClass() {
-			return 'v-size--' + this.size
+		siz() {
+			switch (this.size) {
+			case 'x-small': return { 'x-small': true }
+			case 'small': return { 'small': true }
+			case 'medium': return { 'medium': true }
+			case 'large': return { 'large': true }
+			case 'x-large': return { 'x-large': true }
+			}
 		}
+	},
+	mounted() {
+		console.log(this.size)
 	},
 	props: {
 		label: {
@@ -24,10 +33,10 @@ export default {
 		},
 		size: {
 			type: String,
-			default: 'small',
-			validator: function(value) {
-				return ['x-small', 'small', 'medium', 'large'].indexOf(value) !== -1
-			},
+			default: 'medium',
+			// // validator: function(value) {
+			// 	return ['x-small', 'small', 'medium', 'large'].indexOf(value) !== -1
+			// },
 		},
 		backgroundColor: {
 			type: String,

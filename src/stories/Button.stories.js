@@ -17,9 +17,9 @@ export default {
 		},
 		backgroundColor: { control: 'color' },
 		size: {
-			control: { 
-				type: 'inline-radio', 
-				options: {xsmall: 'x-small', small: 'small', medium: 'medium', large: 'large' } 
+			control: {
+				type: 'inline-radio',
+				options: {xsmall: 'x-small', small: 'small', medium: 'medium', large: 'large', xlarge: 'x-large' }
 			},
 		},
 		// size: {
