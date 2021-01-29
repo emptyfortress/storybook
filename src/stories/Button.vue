@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-	v-btn(v-bind="siz") {{ label }}
+	v-btn(v-bind="siz" :color="calcColor") {{ label }}
 
 </template>
 
@@ -9,13 +9,20 @@ div
 export default {
 	name: 'Button',
 	computed: {
-		siz() {
+		siz () {
 			switch (this.size) {
 			case 'x-small': return { 'x-small': true }
 			case 'small': return { 'small': true }
 			case 'medium': return { 'medium': true }
 			case 'large': return { 'large': true }
 			case 'x-large': return { 'x-large': true }
+			default: return {'medium': true}
+			}
+		},
+		calcColor () {
+			switch (this.primary) {
+			case true: return 'primary'
+			default: return ''
 			}
 		}
 	},
@@ -34,9 +41,6 @@ export default {
 		size: {
 			type: String,
 			default: 'medium',
-			// // validator: function(value) {
-			// 	return ['x-small', 'small', 'medium', 'large'].indexOf(value) !== -1
-			// },
 		},
 		backgroundColor: {
 			type: String,
