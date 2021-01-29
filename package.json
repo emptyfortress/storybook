@@ -39,7 +39,7 @@
     "pug-plain-loader": "^1.1.0",
     "pug-runtime": "^3.0.0",
     "sass": "^1.32.0",
-    "sass-loader": "^10.0.0",
+    "sass-loader": "^10.1.1",
     "storypug": "^1.0.0-rc.8",
     "style-loader": "^2.0.0",
     "stylus": "^0.54.8",

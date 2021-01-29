@@ -26,9 +26,6 @@ export default {
 			}
 		}
 	},
-	mounted() {
-		console.log(this.size)
-	},
 	props: {
 		label: {
 			type: String,
