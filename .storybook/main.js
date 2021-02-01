@@ -43,7 +43,7 @@ module.exports = {
 						sassOptions: {
 							indentedSyntax: true,
 						},
-						additionalData: "@import '/Users/admin/Develop/storybook/node_modules/vuetify/src/styles/settings/_variables.scss'",
+						// additionalData: "@import '`#`/styles/styles.sass'",
 					},
 				},
 			],
