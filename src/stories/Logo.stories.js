@@ -1,7 +1,7 @@
 import Logo from './Logo.vue'
 
 export default {
-	title: 'Brand',
+	title: 'Brand/Логотип',
 	component: Logo,
 }
 

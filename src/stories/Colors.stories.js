@@ -1,7 +1,7 @@
 import Colors from './Colors.vue'
 
 export default {
-	title: 'Brand',
+	title: 'Brand/Цвета',
 	component: Colors,
 }
 const Template = (args, { argTypes }) => ({

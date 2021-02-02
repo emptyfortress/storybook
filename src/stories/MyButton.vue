@@ -1,14 +1,15 @@
 <template lang="pug">
 div
 	v-btn(v-bind="siz" :color="calcColor" :dark="dark" :depressed="depressed" :text="text" :icon="icon" :tile="tile" @click="onClick")
-		v-icon(v-show="icon") mdi-heart
-		span(v-show="!icon") {{ label }}
+		v-icon(v-if="icon") mdi-heart
+		span(v-if="!icon") {{ label }}
 
 </template>
 
 <script>
+
 export default {
-	name: 'Button',
+	name: 'MyButton',
 	computed: {
 		siz() {
 			switch (this.size) {

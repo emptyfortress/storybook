@@ -1,10 +1,8 @@
-import Button from './Button.vue'
+import MyButton from './MyButton.vue'
 
 export default {
 	title: 'Components/Button',
-	component: Button,
-	description:
-		'Компонент для кнопки. Может быть текстовой, с иконкой, плавающей и тп.',
+	component: MyButton,
 	args: {
 		dark: false,
 	},
@@ -53,8 +51,8 @@ export default {
 // create a base template to share
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
-	components: { Button },
-	template: '<Button :label="label" v-bind="$props" @onClick="onClick"/>',
+	components: { MyButton },
+	template: '<my-button :label="label" v-bind="$props" @onClick="onClick"/>',
 })
 
 // now the stories, you need at least one
@@ -63,14 +61,14 @@ Default.args = {
 	color: 'none',
 	label: 'Button',
 	text: false,
-	// icon: false,
+	icon: false,
 }
 export const Text = Template.bind({})
 Text.args = {
 	color: 'none',
 	label: 'Button',
 	text: true,
-	// icon: false,
+	icon: false,
 }
 export const Icon = Template.bind({})
 Icon.args = {
