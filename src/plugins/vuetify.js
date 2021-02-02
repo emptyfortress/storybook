@@ -5,7 +5,8 @@ Vue.use(Vuetify)
 
 export const options = {
 	icons: {
-		iconfont: 'mdiSvg',
+		// iconfont: 'mdiSvg',
+		iconfont: 'mdi',
 	},
 	theme: {
 		options: {

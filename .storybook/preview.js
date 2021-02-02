@@ -6,6 +6,7 @@ import VueI18n from 'vue-i18n'
 import i18n from '@/i18n'
 import { options } from '@/plugins/vuetify' // <== important
 import 'vuetify/dist/vuetify.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 // // configure Vue to use Vuetify
 Vue.use(Vuetify)

@@ -8,7 +8,9 @@
 
 		v-main
 			.pa-5
-				v-btn(color="primary")  {{ $t('button') }}
+				v-btn(color="primary" text)  {{ $t('button') }}
+				v-btn(icon)
+					v-icon mdi-heart
 				br
 				HelloI18n
 				.locale-changer

@@ -35,16 +35,18 @@ export default {
 					none: 'none',
 					doc: 'docolor',
 					task: 'taskcolor',
+					dark: 'dark',
 					accent: 'accent',
-					secondary: 'secondary',
 					error: 'error',
 					info: 'info',
 					warning: 'warning',
 				},
 			},
 		},
-
-		backgroundColor: { control: 'color' },
+		depressed: {
+			control: 'boolean',
+		},
+		// backgroundColor: { control: 'color' },
 	},
 }
 
@@ -56,8 +58,24 @@ const Template = (args, { argTypes }) => ({
 })
 
 // now the stories, you need at least one
-export const Default = Template.bind({ label: 'Normal' })
+export const Default = Template.bind({})
 Default.args = {
 	color: 'none',
-	label: 'Normal',
+	label: 'Button',
+	text: false,
+	// icon: false,
+}
+export const Text = Template.bind({})
+Text.args = {
+	color: 'none',
+	label: 'Button',
+	text: true,
+	// icon: false,
+}
+export const Icon = Template.bind({})
+Icon.args = {
+	color: 'info',
+	label: '',
+	text: true,
+	icon: true,
 }
