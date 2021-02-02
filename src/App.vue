@@ -14,6 +14,7 @@
 				.locale-changer
 					select(v-model="$i18n.locale")
 						option(v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang") {{ lang }}
+				.overline Сведения о деле
 
 </template>
 

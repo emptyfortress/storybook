@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-	v-btn(v-bind="siz" :color="calcColor") {{ label }}
+	v-btn(v-bind="siz" :color="calcColor" :dark="dark") {{ label }}
 
 </template>
 
@@ -19,9 +19,24 @@ export default {
 			default: return {'medium': true}
 			}
 		},
+		dark () {
+			switch (this.color) {
+			case 'none': return false
+			case 'docolor': return true
+			case 'taskcolor': return true
+			default: return false
+			}
+		},
 		calcColor () {
-			switch (this.primary) {
-			case true: return 'primary'
+			switch (this.color) {
+			case 'none': return ''
+			case 'docolor': return 'docolor'
+			case 'taskcolor': return 'taskcolor'
+			case 'accent': return 'accent'
+			case 'secondary': return 'secondary'
+			case 'error': return 'error'
+			case 'info': return 'info'
+			case 'warning': return 'warning'
 			default: return ''
 			}
 		}
@@ -31,9 +46,9 @@ export default {
 			type: String,
 			required: true,
 		},
-		primary: {
-			type: Boolean,
-			default: false,
+		color: {
+			type: String,
+			default: '',
 		},
 		size: {
 			type: String,
@@ -51,3 +66,10 @@ export default {
 }
 </script>
 
+<style scoped lang="scss">
+.test {
+	color: #ee44aa;
+
+}
+
+</style>
