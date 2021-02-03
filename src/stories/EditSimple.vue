@@ -1,5 +1,6 @@
 <template lang="pug">
-.line
+.line(:style="calcClass")
+	v-icon(v-if="icon" color="link") mdi-heart
 	.content(tabindex="0" contenteditable id="div" ref="div") {{ $t('clicktoedit') }}
 	v-icon(small @click="clear").clear mdi-close-circle
 </template>
@@ -7,6 +8,27 @@
 <script>
 
 export default {
+	props: {
+		fixedwidth: {
+			type: Boolean,
+			default: false
+		},
+		width: {
+			type: String,
+			default: '300px'
+		},
+		icon: {
+			type: Boolean,
+			default: false
+		}
+	},
+	computed: {
+		calcClass () {
+			if (this.fixedwidth) {
+				return `width: ${this.width};`
+			} else return ''
+		}
+	},
 	methods: {
 		clear () {
 			this.$refs.div.textContent = ''
@@ -18,22 +40,26 @@ export default {
 
 <style scoped lang="scss">
 @import '@/assets/css/colors.scss';
-
 .line {
-	line-height: 130%;
-	color: $link;
-	display: inline-block;
+	display: inline-flex;
 	padding: 0 1.6rem 0 0;
+	margin: 0 0 0 13px;
 	position: relative;
+	&.fixed {
+		width: 400px;
+	}
 	&:focus-within {
 		border-bottom: 1px dotted $link;
+		margin-right: 10px;
 		.clear {
 			display: block;
 		}
 	}
 }
 .content {
+	color: $link;
 	min-width: 50px;
+	margin-left: 5px;
 	&:focus {
 		outline: none;
 		color: #000;

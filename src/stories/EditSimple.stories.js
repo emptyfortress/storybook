@@ -14,13 +14,20 @@ export default {
 				options: { English: 'en', Русский: 'ru' },
 			},
 		},
+		fixedwidth: {
+			control: 'boolean',
+		},
 	},
 }
 
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { EditSimple },
-	template: '<edit-simple />',
+	template: '<edit-simple :fixedwidth="fixedwidth" :width="width" :icon="icon" >',
 })
 
 export const Simple = Template.bind({})
+Simple.args = {
+	width: '400px',
+	icon: false
+}
