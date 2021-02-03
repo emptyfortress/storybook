@@ -1,5 +1,6 @@
 {
   "message": "hello i18n !!",
 	"button": "Button",
-	"clicktoedit": "Click to edit"
+	"clicktoedit": "Click to edit",
+	"label": "Label"
 }

@@ -3,7 +3,11 @@ const path = require('path')
 module.exports = {
 	stories: [
 		'../src/stories/Welcome.stories.js',
-		'../src/**/*.stories.mdx',
+		// '../src/**/*.stories.mdx',
+		'../src/stories/Logo.stories.js',
+		'../src/stories/Colors.stories.js',
+		'../src/stories/EditSimple.stories.js',
+		'../src/stories/EditLabel.stories.js',
 		'../src/**/*.stories.@(js|jsx|ts|tsx)',
 	],
 	addons: [
