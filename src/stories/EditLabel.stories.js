@@ -23,7 +23,7 @@ export default {
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { EditLabel },
-	template: '<edit-label :fixedwidth="fixedwidth" :width="width" :icon="icon" >',
+	template: '<edit-label :fixedwidth="fixedwidth" :width="width" :icon="icon" />',
 })
 
 export const Label = Template.bind({})

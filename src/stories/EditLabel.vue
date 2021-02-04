@@ -3,16 +3,35 @@
 	.label {{ $t('label')}}:
 	.line(:style="calcClass")
 		v-icon(v-if="icon" color="link").heart mdi-heart
-		v-icon(v-if="icon" color="link").heart1 mdi-book-open-page-variant-outline
+		v-icon(v-if="icon" color="link" @click="dialog = true").heart1 mdi-book-open-page-variant-outline
 		.book(v-if="!icon")
-			v-icon mdi-book-open-page-variant-outline
+			v-icon(@click="dialog = true").open mdi-book-open-page-variant-outline
 		.content(tabindex="0" contenteditable id="div" ref="div") {{ $t('clicktoedit') }}
 		v-icon(small @click="clear").clear mdi-close-circle
+		.wind
+			.item(v-for="n in 3")
+				v-avatar(color="#ccc" size="24")
+					img(src="@/assets/img/user0.svg")
+				.name Фамилия Имя Отчество
+	v-dialog(v-model="dialog" width="500")
+		v-card
+			v-card-title(class="headline grey lighten-2") Это справочник
+			v-card-text.mt-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			v-divider
+			v-card-actions
+				v-spacer
+				v-btn(color="link" text @click="dialog = false") Закрыть
+
 </template>
 
 <script>
 
 export default {
+	data () {
+		return {
+			dialog: false
+		}
+	},
 	props: {
 		fixedwidth: {
 			type: Boolean,
@@ -64,9 +83,9 @@ export default {
 		position: absolute;
 		top: 0;
 		left: -30px;
-		i {
-			font-size: 1.3rem;
+		.open {
 			color: #fff;
+			font-size: 1.3rem;
 		}
 	}
 	.heart1 {
@@ -76,8 +95,9 @@ export default {
 	&:focus-within {
 		border-bottom: 1px dotted $link;
 		margin-right: 10px;
-		.clear, .book, .heart1 {
+		.clear, .book, .heart1, .wind {
 			display: block;
+			cursor: pointer;
 		}
 		.heart {
 			display: none;
@@ -107,5 +127,29 @@ export default {
 }
 .theme--dark .content:focus {
 	color: #ccc;
+}
+.wind {
+	display: none;
+	position: absolute;
+	background: #fff;
+	top: 28px;
+	left: 0;
+	z-index: 10;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 3px rgba(0,0,0, .2);
+	.item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		padding: .5rem .5rem;
+		&:hover {
+			background: #eee;
+		}
+	}
+	.name {
+		font-size: .85rem;
+		white-space: nowrap;
+		margin-left: .3rem;
+	}
 }
 </style>
