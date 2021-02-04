@@ -1,7 +1,7 @@
 import EditLabel from './EditLabel'
 
 export default {
-	title: 'Edit in place/Label',
+	title: 'Edit in place/Complex',
 	component: EditLabel,
 	args: {
 		dark: false,
@@ -23,11 +23,12 @@ export default {
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { EditLabel },
-	template: '<edit-label :fixedwidth="fixedwidth" :width="width" :icon="icon" />',
+	template: '<edit-label :fixedwidth="fixedwidth" :width="width" :icon="icon" :label="label" />',
 })
 
-export const Label = Template.bind({})
-Label.args = {
+export const Complex = Template.bind({})
+Complex.args = {
 	width: '400px',
-	icon: false
+	icon: false,
+	label: true
 }

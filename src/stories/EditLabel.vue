@@ -1,6 +1,6 @@
 <template lang="pug">
 .flex
-	.label {{ $t('label')}}:
+	.label(v-if="label") {{ $t('label')}}:
 	.line(:style="calcClass")
 		v-icon(v-if="icon" color="link").heart mdi-heart
 		v-icon(v-if="icon" color="link" @click="dialog = true").heart1 mdi-book-open-page-variant-outline
@@ -44,7 +44,11 @@ export default {
 		icon: {
 			type: Boolean,
 			default: false
-		}
+		},
+		label: {
+			type: Boolean,
+			default: true
+		},
 	},
 	computed: {
 		calcClass () {
