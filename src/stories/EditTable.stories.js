@@ -14,20 +14,16 @@ export default {
 				options: { English: 'en', Русский: 'ru' },
 			},
 		},
-		fixedwidth: {
-			control: 'boolean',
-		},
 	},
 }
 
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { EditTable },
-	template: '<edit-table :fixedwidth="fixedwidth" :width="width" :icon="icon" >',
+	template: '<edit-table :icon="icon" />',
 })
 
 export const Table = Template.bind({})
 Table.args = {
-	width: '400px',
-	icon: false
+	icon: false,
 }
